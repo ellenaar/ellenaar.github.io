@@ -1,0 +1,95 @@
+body,html{
+    height: 100%
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.hero {
+    height: 652px;
+    width: 100%;
+    background: url(../ellenaar.github.io/landscape-1802337.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 8000px;
+}
+
+.navigation {
+    background-color: transparent;
+    text-align: center;
+    top: 0px;
+    left:0px;
+    right: 0px;
+    z-index: 9999;
+
+}
+
+.navigation ul{
+    height:50px;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.navigation a{
+    text-decoration: none;
+    font-family: 'Arsenal', sans-serif;
+    color: oldlace;
+    font-size: 20px;
+}
+
+
+
+.navigation a:hover{
+    color: gainsboro;
+}
+
+.navigation a.active {
+    text-decoration: underline;
+}
+
+h1{
+    text-align: center;
+    margin-top: 215px;
+    color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 50px;
+    text-shadow: 0.3px 0.3px gray;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    font-family: 'Arsenal', sans-serif;
+    color:;
+    text-shadow: 0.3px 0.3px gray;
+    font-size: 14px;
+}
+
+.resize{
+    margin-top: 55px;
+    align-items: center;
+
+}
+
+h2{
+    text-align: center;
+    margin-top: 100px;
+    color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    text-shadow: 0.3px 0.3px gray;
+}

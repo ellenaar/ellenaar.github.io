@@ -22,7 +22,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    max-width: 1000px;
+    max-width: 3000px;
 }
 
 .navigation {
@@ -72,7 +72,32 @@ h1{
     color: oldlace;
     font-family: 'Arsenal', sans-serif;
     font-size: 50px;
+    text-shadow: 0.4px 0.4px gray;
+}
+
+article li{
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 180%;
+}
+
+article li a:link{
+    text-decoration: none;
+    color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 17px;
     text-shadow: 0.3px 0.3px gray;
+    
+}
+
+article li a:hover{
+    color: black;
+}
+
+article li a:visited { 
+    color: oldlace;
 }
 
 .footer{
@@ -87,23 +112,150 @@ h1{
 }
 
 .resize{
-    margin-top: 55px;
+    margin-left: 4%;
 }
 
 h2{
     text-align: center;
-    margin-top: 10%;
+    margin-top: 8%;
     color: oldlace;
     font-family: 'Arsenal', sans-serif;
     font-size: 30px;
     text-shadow: 0.5px 0.5px gray;
 }
 
-@media only screen and (max-width: 670px){
+h3{
+    text-align: center;
+    color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 30px;
+    text-shadow: 0.5px 0.5px gray;
+}
 
- 
+.teksti1{
+    color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    text-align: center;
+    margin: 0 20%;
+    text-shadow: 0.5px 0.5px gray;
+}
+
+.teksti2{
+    color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    text-align: center;
+    margin: 0 30%;
+    text-shadow: 0.5px 0.5px gray;
+    font-size: 25px;
+}
+
+.dropdown{
+    display: none;
+}
+
+@media only screen and (max-width: 500px){
+    
+    .dropbtn {
+        background-color: transparent;
+        color: oldlace;
+        font-family: 'Arsenal', sans-serif;
+        text-shadow: 0.5px 0.5px gray;
+        text-align: center;
+        padding: 22px;
+        font-size: 26px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: fixed;
+        display: table;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(0,0,0,0.3);
+        min-width: 114px;
+        z-index: 1;
+        padding: 8px 0px;
+        
+    }
+
+    .dropdown-content a{
+        color: black;
+        font-family: 'Arsenal', sans-serif;
+        font-size: 16px;
+        line-height: 30px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        color: oldlace;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: transparent;
+        
+    }
+    
+    .navigation li{
+        display: none;
+    }
+    
+    h1{
+        margin-top: 150px;
+    }
+    
+   .resize{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
 
 
+@media only screen and (max-width: 600px){
+    
+    .navigation li a{
+        font-size: 18px;
+    }
+    
+    h2,h3{
+        font-size: 22px;
+    }
+    
+    h2{
+        margin-top: 5%;
+    }
+    
+    .teksti1{
+        font-size: 16px; 
+    }
+    
+    .teksti2{
+        
+    }
+  
+    article li a:link{
+        font-size: 16px;
+    }
+    
+    h1{
+        font-size: 40px;
+        
+    }
+    
+    .resize{
+        min-width: 110px;
+    }
+    
+}
 
 

@@ -100,6 +100,7 @@ article li a:visited {
     width: 100%;
     position: absolute;
     text-align: center;
+    color: dimgrey;
     bottom: 0px;
     font-family: 'Arsenal', sans-serif;
     text-shadow: 0.2px 0.2px oldlace;

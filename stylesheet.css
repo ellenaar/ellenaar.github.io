@@ -130,6 +130,7 @@ h3{
     text-shadow: 0.5px 0.5px gray;
 }
 
+
 .teksti1{
     color: oldlace;
     font-family: 'Arsenal', sans-serif;
@@ -150,6 +151,52 @@ h3{
 .dropdown{
     display: none;
 }
+
+#news{
+    display: inline-table;
+    text-align: center;
+    color: black;
+    
+}
+
+#window{
+    border: 2px solid oldlace;
+    margin: 2% 20%;
+    min-height: 200px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#controlpanel{
+    padding-bottom: 8%;
+    text-align: center;
+}
+
+#otsikko{
+     color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    text-align: center;
+    text-shadow: 0.5px 0.5px gray;
+    font-size: 26px;
+}
+
+#paivamaara{
+     color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    text-align: center;
+    text-shadow: 0.5px 0.5px gray;
+    font-size: 16px;
+}
+
+#sisalto{
+    color: oldlace;
+    font-family: 'Arsenal', sans-serif;
+    text-align: center;
+    text-shadow: 0.5px 0.5px gray;
+    padding-top: 4%;
+}
+
+
 
 @media only screen and (max-width: 500px){
     

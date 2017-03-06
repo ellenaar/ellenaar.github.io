@@ -5,6 +5,9 @@
         <meta name="author" content="Ellen Aarinen">
         <meta name="description" content="A web page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="slideshow.js"></script>
         <link rel="shortcut icon" href="../ellenaar.github.io/rising_sun_logo2.png">
         <title>Aurinkoenergia</title>
         <link rel="stylesheet" type="text/css" href="normalize.css">
@@ -37,17 +40,23 @@
                 <h2>Arvolupauksemme</h2>
                 <p class="teksti1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus diam dignissim lectus convallis bibendum. <br> Vestibulum eleifend congue diam in luctus. Nullam augue libero, iaculis id semper vitae, convallis eu erat. Vestibulum sit amet ullamcorper quam. Fusce egestas semper dignissim. Suspendisse vulputate, erat ut placerat vestibulum, nibh mi consequat sapien, a aliquet ante diam nec eros. Ut non placerat quam. Praesent volutpat gravida ipsum ut vestibulum.</p>
             </article>
-         
-        <div class="articleH3">
-            <article>
-                <h3>Yhteistyökumppanit</h3>
-                <li><a href="http://www.aurinkoteknillinenyhdistys.fi">Aurinkoteknillinen Yhdistys Ry</a></li>
-                <li><a href="https://ilmasto-opas.fi/fi/">Ilmasto-opas</a></li>
-                <li><a href="http://aurinkovirta.fi">Aurinkosähköä Suomeen</a></li>
-                <li><a href="http://www.finsolar.net">FinSolar</a></li>
-            </article>
-        </div>
-    </section> 
+    </section>
+    <section id="window">
+        
+   
+        <article id="news">
+          
+            <div id="otsikko"></div>
+            <div id="paivamaara"></div>
+            <div id="sisalto"></div>
+        </article>
+     </section>   
+           <div id="controlpanel">
+            <button  id="prev">previous</button>
+            <button id="playpause">pause</button>
+            <button id="next">next</button>
+            </div>
+ 
                 
         <div class="footer">
             <footer>

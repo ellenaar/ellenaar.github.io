@@ -168,8 +168,20 @@ h3{
 }
 
 #controlpanel{
-    padding-bottom: 8%;
+    padding-bottom: 6%;
     text-align: center;
+}
+
+#prev:hover{
+    color: dimgray;
+}
+
+#next:hover{
+    color: dimgray;
+}
+
+#playpause:hover{
+    color: dimgray;
 }
 
 #otsikko{
@@ -194,6 +206,27 @@ h3{
     text-align: center;
     text-shadow: 0.5px 0.5px gray;
     padding-top: 4%;
+}
+
+#next{
+    background-color: transparent;
+    color: oldlace;
+    font-size: 24px;
+    border: none;
+}
+
+#prev{
+    border: none;
+    background-color: transparent;
+    color: oldlace;
+    font-size: 24px;
+}
+
+#playpause{
+    border: none;
+    background-color: transparent;
+    color: oldlace;
+    font-size: 24px;
 }
 
 

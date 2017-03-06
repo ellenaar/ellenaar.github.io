@@ -4,17 +4,17 @@ var sisalto = null;
 var current = 0;
 var x = null;
 var onplay = true;
-var storage = 0;
+
 
 function setCurrent() {
     if(localStorage.getItem("storage")===null || localStorage.getItem("storage")===undefined){
         
     }else{
-        current = parseInt(localStorage.getItem("storage"))
+        current = parseInt(localStorage.getItem("storage"));
     }
 } 
 
-setCurrent()
+setCurrent();
 
 
     
@@ -22,13 +22,13 @@ $.getJSON("https://aarinee1-84660.firebaseio.com/.json", function(data){
          
     sisalto = data;
     
-    myFunction()
+    myFunction();
     
-    pauseFunction()
+    pauseFunction();
     
-    previous()
+    previous();
     
-    next()
+    next();
     
           });
 
@@ -39,13 +39,16 @@ function myFunction () {
     
     x = setInterval(function() { 
         $("#otsikko").hide().html(sisalto.uutiset[current].otsikko).fadeIn(1500); $("#paivamaara").hide().html(sisalto.uutiset[current].päivämäärä).fadeIn(1500); $("#sisalto").hide().html(sisalto.uutiset[current].sisältö).fadeIn(1500);
-                         if(current<2){ current += 1} else { current = 0}
+                         if(current<2){ 
+                             current = (current + 1);
+                         } else { 
+                             current = 0;}
                            }, 3000);
 
     localStorage.setItem("storage", current);
    console.log("localStorage: " + parseInt(localStorage.getItem('storage')));
 
-};
+}
  
   
     
@@ -54,7 +57,7 @@ function pauseFunction(){
 $( "#playpause" ).click(function() { 
                console.log("hihii" + onplay);
 
-    if(onplay==true){
+    if(onplay===true){
    
   clearInterval(x);
     onplay = false;
@@ -72,7 +75,7 @@ $( "#playpause" ).click(function() {
     
      localStorage.setItem("storage", current);
    console.log("localStorage: " + parseInt(localStorage.getItem('storage')));
-};
+}
     
   
     
@@ -84,15 +87,15 @@ function previous(){
         onplay = false;
         document.getElementById("playpause").innerHTML = ("play");
         
-         console.log(current)
+         console.log(current);
    
-      if(current == 0){
+      if(current === 0){
           
-          console.log(current)
+          console.log(current);
           
          current = 2;
          
-          console.log(current)                       
+          console.log(current);                       
       
         
       }  else {
@@ -100,29 +103,25 @@ function previous(){
           current = current - 1;
        
       }
-             $("#news").html(sisalto.uutiset[current].otsikko + sisalto.uutiset[current].päivämäärä + sisalto.uutiset[current].sisältö);
+            $("#otsikko").hide().html(sisalto.uutiset[current].otsikko).fadeIn(1500); $("#paivamaara").hide().html(sisalto.uutiset[current].päivämäärä).fadeIn(1500);$("#sisalto").hide().html(sisalto.uutiset[current].sisältö).fadeIn(1500);
     });
     
   
     
      localStorage.setItem("storage", current);
    console.log("localStorage: " + parseInt(localStorage.getItem('storage')));
-};
+}
   
 function next(){
     
-     var storage = localStorage.getItem("current")
-  //  If(current===null) current=0
-    
     $( "#next" ).click(function(){
-        
       
-      clearInterval(x);
-        onplay = false;
-      document.getElementById("playpause").innerHTML = ("play");
+    clearInterval(x);
+    onplay = false;
+    document.getElementById("playpause").innerHTML = ("play");
 
         
-         console.log(onplay)
+         console.log(onplay);
    
       if(current == 2){
           current = 0;
@@ -130,7 +129,7 @@ function next(){
           current = current + 1;
       }
          
-             $("#news").html(sisalto.uutiset[current].otsikko + sisalto.uutiset[current].päivämäärä + sisalto.uutiset[current].sisältö);
+            $("#otsikko").hide().html(sisalto.uutiset[current].otsikko).fadeIn(1500); $("#paivamaara").hide().html(sisalto.uutiset[current].päivämäärä).fadeIn(1500);$("#sisalto").hide().html(sisalto.uutiset[current].sisältö).fadeIn(1500);
     });  
      localStorage.setItem("storage", current);
    console.log("localStorage: " + parseInt(localStorage.getItem('storage')));
@@ -139,4 +138,4 @@ function next(){
 
     
     
-}
+};

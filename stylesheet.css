@@ -60,10 +60,10 @@ body{
 
 h1{
     text-align: center;
-    margin-top: 215px;
+    margin-top: 11%;
     color: oldlace;
     font-family: 'Arsenal', sans-serif;
-    font-size: 50px;
+    font-size: 280%;
     text-shadow: 0.4px 0.4px gray;
 }
 
@@ -229,6 +229,26 @@ h3{
     font-size: 24px;
 }
 
+#v,#c{
+    position: absolute;
+    
+}
+
+
+
+#vidis{
+    margin-left: 25%;
+}
+
+video{
+    min-width: 360px;
+}
+
+.buttoni{
+    text-align: center;
+    margin-top: 34%;
+    margin-bottom: 3%;
+}
 
 
 @media only screen and (max-width: 500px){

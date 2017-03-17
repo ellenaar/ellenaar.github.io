@@ -5,6 +5,7 @@
         <meta name="author" content="Ellen Aarinen">
         <meta name="description" content="A web page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="canvas_video.js"></script>
         <link rel="shortcut icon" href="../ellenaar.github.io/rising_sun_logo2.png">
         <title>Aurinkoenergia</title>
         <link rel="stylesheet" type="text/css" href="normalize.css">
@@ -35,6 +36,30 @@
             <header>
                 <h1>Hyödynnä yöttömän yön <br> aurinkoenergia.</h1>
             </header>
+<div id="vidis">          
+<video id="v" width="640pc" height="360px" controls poster="nayttokuva_sunivideo.png"> 
+    <source src="v2suni.mp4" type="video/mp4" />
+    <source src="v2suni.webm" type="video/webm" />
+    <source src="v2suni.ogv" type="video/ogg" />
+Your browser does not support the HTML5 Video element.
+  
+         <object width="40%" height="30%" type="application/x-shockwave-flash" data="player.swf">
+		<param name="movie" value="player.swf" />
+		<param name="flashvars" value="autostart=true&amp;controlbar=over&amp;image=nayttokuva_sunivideo.png&amp;file=v2suni.mp4" />
+		<img src="nayttokuva_sunivideo.png" width="640" height="360" alt="Aurinkovoimassa on tulevaisuus."
+		     title="Your browser does not support the HTML5 Video element." />
+	</object>
+</video>
+    <canvas id="c"> 
+    </canvas>
+</div> 
+            <div class="buttoni">
+    <button id="myBtn">B&W filter</button>
+           
+            
+            <button onclick="playVid()" type="button">Play Video</button>
+<button onclick="pauseVid()" type="button">Pause Video</button><br>
+                </div>
        
                 <div class="footer">
                     <footer>

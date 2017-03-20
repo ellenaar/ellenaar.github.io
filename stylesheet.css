@@ -235,7 +235,6 @@ h3{
 }
 
 
-
 #vidis{
     margin-left: 25%;
 }
@@ -246,9 +245,33 @@ video{
 
 .buttoni{
     text-align: center;
-    margin-top: 34%;
-    margin-bottom: 3%;
+    margin-top: 32%;
+    margin-bottom: 6%;
 }
+
+#myBtn{
+       border: none;
+    background-color: rgba(0,0,0,0.4);
+    color: dimgray;
+    font-size: 20px;
+}
+
+#myBtn:hover{
+    color: oldlace;
+}
+
+
+#napit{
+     border: none;
+    background-color: rgba(0,0,0,0.4);
+    color: dimgray;
+    font-size: 20px;
+}
+
+#napit:hover{
+    color: oldlace;
+}
+
 
 
 @media only screen and (max-width: 500px){

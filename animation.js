@@ -36,12 +36,13 @@ $(document).ready(function() {
         }
        
           for(i = 0; i<enemies.length; i++){
-            moveEnemy(enemies[i].direction, enemies[i]);  
+            moveEnemy(enemies[i].direction, enemies[i]); 
+              avoidPlayer(enemies[i]);
         };
          
       };
     
-    document.addEventListener("mousedown", function(){
+    canvas.addEventListener("mousedown", function(){
         enemies.splice(0,1);
     });
     

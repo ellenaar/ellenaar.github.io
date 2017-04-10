@@ -17,32 +17,48 @@
     var keysDown = {};
     
     function movePlayer(direction){
+        var oldX = player.x;
+        var oldY = player.y;
       switch (direction){
         case "left":
             player.x -= player.speed;
               if(player.x < 20){
                   player.x = 20;
               }
+         
             break;
         case "right":
             player.x += player.speed;
               if(player.x > 380){
                   player.x = 380;
               }
+             
             break;
         case "up":
             player.y -= player.speed;
               if(player.y < 20){
                   player.y = 20;
               }
+              
             break;
         case "down":
             player.y += player.speed;
               if(player.y > 380){
                   player.y = 380;
               }
+            
             break;
       }  
+          for(i = 0; i<enemies.length; i++){
+
+            if((enemies[i].x + 1.5 *enemies[i].w >= player.x &&
+                enemies[i].x <= player.x + player.w/2) &&
+                (enemies[i].y + 1.5 *enemies[i].h >= player.y &&
+                enemies[i].y <= player.y + player.h/2)){
+                player.x = oldX;
+                player.y = oldY;
+            }
+          }
     };
     
     window.addEventListener('keydown', function(e){
@@ -82,8 +98,3 @@
         }
     };
    
-    
-    
-
-    
-    

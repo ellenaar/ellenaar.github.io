@@ -6,7 +6,7 @@
             y: getRandomInt(0, 365),
             w: 35,
             h: 35,
-            speed: getRandomInt(1, 19),
+            speed: getRandomInt(1, 14),
             direction: randomDirection()
         }
         return enemy
@@ -21,9 +21,7 @@
     function drawEnemy(context, enemy, picture){
         if(enemy.direction == "right"){context.drawImage(picture, 0, 35.5, 50, 35.5, enemy.x, enemy.y, 50, 35.5)};
         if(enemy.direction == "left"){context.drawImage(picture, 50, 35.5, 50, 35.5, enemy.x, enemy.y, 50, 35.5)};
-         if(enemy.direction == "up"){context.drawImage(picture, 0, 35.5, 50, 35.5, enemy.x, enemy.y, 50, 35.5)};
-        if(enemy.direction == "down"){context.drawImage(picture, 50, 35.5, 50, 35.5, enemy.x, enemy.y, 50, 35.5)};
-        
+         if(enemy.direction == "up" || enemy.direction == "down"){context.drawImage(picture, 0, 35.5, 50, 35.5, enemy.x, enemy.y, 50, 35.5)};
     };
 
 
@@ -39,6 +37,22 @@
         if(direction == 3) return "down"
     };
 
+    function avoidPlayer(enemy){
+        if(
+               ((enemy.x + 1.5 *enemy.w >= player.x &&
+                enemy.x <= player.x + player.w/2) &&
+                (enemy.y + 1.5*enemy.h >= player.y &&
+                enemy.y <= player.y + player.h/2))
+           
+        ){
+            
+            if(enemy.direction == "right") enemy.direction = "left";
+            else if(enemy.direction == "left") enemy.direction = "right";
+            else if(enemy.direction == "down") enemy.direction = "up";
+            else if(enemy.direction == "up") enemy.direction = "down";
+        }
+    };
+
     function moveEnemy(direction, enemy){
         switch (direction){
         case "left":
@@ -47,14 +61,6 @@
                   enemy.x = 0;
                   enemy.direction = "right";
               }
-                for(var i = 0; i<enemies.length; i++){
-                     console.log("moikkamoi1");
-                    if(enemies[i].x == (player.x+50)){
-                         console.log("moikkamoi2");
-                        enemies[i].direction = "right";
-                        console.log("moikkamoi3");
-                    }
-                }
             break;
         case "right":
             enemy.x += enemy.speed;
@@ -78,6 +84,7 @@
               }
             break;
       }  
+    
     };
     
     

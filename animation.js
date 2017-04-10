@@ -20,17 +20,14 @@ $(document).ready(function() {
             movePlayer('up');
         }
         if(40 in keysDown){
-            console.log('key down');
             movePlayer('down')
            
         }
         if(37 in keysDown){
-            console.log('key left');
             movePlayer('left')
             player.direction = "left";
         }
         if(39 in keysDown){
-            console.log('key right');
             movePlayer('right')
             player.direction = "right";
         }
@@ -78,7 +75,6 @@ $(document).ready(function() {
     
     $("#reset").click( function()
            {
-        console.log("testing reset " + player.speed);
         reset();
     });
     

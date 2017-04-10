@@ -54,6 +54,7 @@
     };
 
     function moveEnemy(direction, enemy){
+        
         switch (direction){
         case "left":
             enemy.x -= enemy.speed;
@@ -83,8 +84,7 @@
                   enemy.direction = "up";
               }
             break;
-      }  
-    
+      }   
     };
     
     

@@ -89,11 +89,9 @@
            switch(amount){
         case "add":
             player.speed = 29;
-            console.log("testing add " + player.speed);
             break;
         case "reduce":
             player.speed = 5;
-            console.log("testing reduce " + player.speed);
             break;
         }
     };

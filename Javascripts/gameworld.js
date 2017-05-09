@@ -60,7 +60,7 @@ Jumper.Play.prototype = {
     this.cursor = this.input.keyboard.createCursorKeys();
         
     // music Icon switches 
-    var kuva = game.add.image(260, 25, 'musicIcon')
+    var kuva = game.add.image(150, 5, 'musicIcon')
     kuva.inputEnabled = true;
     kuva.fixedToCamera = true;
     kuva.events.onInputDown.add(tester, self);
